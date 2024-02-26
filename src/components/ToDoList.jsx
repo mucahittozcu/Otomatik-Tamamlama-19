@@ -130,7 +130,7 @@ export default function ToDoList() {
         {currentList}
         <label className='new-item-label'>
 
-            {/* + butonunun opacity değerini focus olup olmadığını kontrol ederek ayarlıyoruz   */}
+            {/* + butonunun opacity değerini focus olup olmadığını kontrol ederek ayarlıyoruz.bu şekilde de yapılabilir {inputInFocus && "faded" } */}
           <img src='./images/add-item.svg' className={`add-item-icon ${inputInFocus ? "faded" : ""}`} />
           <input
             className='new-item-input'
@@ -143,7 +143,7 @@ export default function ToDoList() {
         </label>
       </div>
       <div className='do-it-button-container'>
-        <button onClick={() =>autoComplete(handleCheckBoxChange)}>Otomatik Tamamlama</button>
+        <button onClick={autoComplete}>Otomatik Tamamlama</button>
       </div>
     </div>
   )
